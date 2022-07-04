@@ -2,8 +2,8 @@
 package br.com.calculadora;
 
 public class Calculadora {
-	private int num1 = 0;
-	private int num2 = 0;
+	private double num1 = 0;
+	private double num2 = 0;
 	private String sinal;
 	private double total = 0;
 	
@@ -23,11 +23,11 @@ public class Calculadora {
 		return num2;
 	}
 	
-	public void setNum1(int num1) {
+	public void setNum1(double num1) {
 		this.num1 = num1;
 	}
 	
-	public void setNum2(int num2) {
+	public void setNum2(double num2) {
 		this.num2 = num2;
 	}
 	
@@ -43,7 +43,7 @@ public class Calculadora {
 	}
 	
 	public double multiplicacao() {
-		this.sinal = "*";
+		this.sinal = "x";
 		return this.total = this.num1 * this.num2;
 	}
 	
@@ -53,6 +53,6 @@ public class Calculadora {
 	}
 	public double porcentagem() {
 		this.sinal = "%";
-		return this.total = this.num1 * ((double) this.num2 / 100);
+		return this.total = this.num1 * (this.num2 / 100);
 	}
 }
